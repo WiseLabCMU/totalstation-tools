@@ -1,0 +1,4 @@
+[submodule "totalopenstation"]
+	path = totalopenstation
+	url = https://github.com/steko/totalopenstation.git
+	branch = master
