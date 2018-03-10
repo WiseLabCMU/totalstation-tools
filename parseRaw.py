@@ -35,7 +35,10 @@ if __name__ == "__main__":
 			else:	
 				z = pt.geometry.z - UNKNOWN_STATION.z
 
-			print "%s %s: (%.3f,%.3f,%.3f)" % (pttype, ptid, x, y, z)
-
+			if 'attrib' in pt.properties:
+				print "%s %s %s: %.3f,%.3f,%.3f" % (pttype, pt.properties['point_name'], pt.properties['attrib'], x, y, z)
+			else:
+				print "%s %s: %.3f,%.3f,%.3f" % (pttype, pt.properties['point_name'], x, y, z)
+			
 	except IOError:
 		print "file %s not found" % filename
